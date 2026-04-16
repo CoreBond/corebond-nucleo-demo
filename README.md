@@ -56,7 +56,7 @@ This removes entire classes of key extraction and replay attacks.
 
 ---
 
-## Next Steps
+## Work With Us
 
 Exploring hardware-rooted identity for real-world systems?
 
