@@ -1,7 +1,5 @@
 # CoreBond SDK (Developer Preview)
 
-CoreBond SDK (Developer Preview)
-
 Hardware-rooted device identity without stored keys.
 
 This prototype demonstrates consistent device identity and clear separation between physical devices using intrinsic entropy signals.
@@ -13,11 +11,12 @@ This prototype demonstrates consistent device identity and clear separation betw
 Run from the repository root directory.
 
 ### Commands
-
 pip install numpy  
 python run_demo.py  
 
-### Expected Output
+---
+
+## Expected Output
 
 === CoreBond Demo ===
 
@@ -43,13 +42,12 @@ This behavior has been observed across multiple physical devices with consistent
 Traditional systems rely on stored secrets or transmitted keys.
 
 CoreBond demonstrates a different model:
+
 - No stored keys  
 - No key exchange  
-- Identity is derived from the physical device itself rather than stored credentials.
+- Identity is derived from the physical device itself  
 
-This model eliminates dependence on stored credentials entirely.
-
-This removes entire classes of key extraction and replay attacks.
+This eliminates dependence on stored credentials and removes entire classes of key extraction and replay attacks.
 
 ---
 
@@ -63,7 +61,7 @@ If you're working on device security, IoT, or embedded systems, reach out:
 
 intro@corebond.io
 
-
+---
 
 ## License
 
