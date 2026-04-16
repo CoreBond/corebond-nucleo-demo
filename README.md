@@ -60,7 +60,7 @@ This removes entire classes of key extraction and replay attacks.
 
 For access to extended SDK capabilities and integration guidance:
 
-Visit: https://corebond.io
+Learn more: https://corebond.io
 
 ---
 
