@@ -1,8 +1,10 @@
 # CoreBond SDK (Developer Preview)
 
-Hardware-rooted device identity without stored keys.
+Device identity without stored secrets.
 
-This prototype demonstrates consistent device identity and clear separation between physical devices using intrinsic entropy signals.
+CoreBond demonstrates that device identity can be verified without storing or transmitting any secret material.
+
+This prototype shows consistent identity behavior and clear separation between physical devices using intrinsic entropy signals.
 
 ---
 
@@ -16,7 +18,7 @@ python run_demo.py
 
 ---
 
-## Expected Output
+## Observed Behavior
 
 === CoreBond Demo ===
 
@@ -31,23 +33,40 @@ Run time: < 1 second. No setup beyond Python + NumPy.
 
 - Signals from the same device are consistent  
 - Signals from different devices are distinguishable  
-- Identity can be verified without stored keys  
+- Identity can be verified without stored secrets  
 
 This behavior has been observed across multiple physical devices with consistent separation between legitimate and non-matching signals under repeated cold boot conditions.
+
+Environmental variation and long-term drift are active areas of ongoing validation.
+
+---
+
+## What This Is Not
+
+- Not encryption  
+- Not a key storage mechanism  
+- Not a PUF library or wrapper  
+- Not secure key exchange  
+
+CoreBond does not protect secrets. It removes the need for them.
 
 ---
 
 ## Why This Matters
 
-Traditional systems rely on stored secrets or transmitted keys.
+Most security systems assume secrets can be protected.
 
-CoreBond demonstrates a different model:
+CoreBond assumes they will eventually be extracted.
 
-- No stored keys  
-- No key exchange  
-- Identity is derived from the physical device itself  
+Instead of defending stored credentials, CoreBond eliminates them:
 
-This eliminates dependence on stored credentials and removes entire classes of key extraction and replay attacks.
+- No secrets to steal  
+- No secrets to rotate  
+- No secrets to leak at scale  
+
+Identity is derived from the physical device itself, not from stored or transmitted data.
+
+This removes entire classes of key extraction and replay attacks.
 
 ---
 
