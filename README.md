@@ -1,4 +1,4 @@
-# CoreBond SDK (Developer Preview)
+# CoreBond Nucleo Demo (Developer Preview)
 
 Device identity without stored secrets.
 
