@@ -1,31 +1,31 @@
 # CoreBond Nucleo Demo (Developer Preview)
 
-Device identity without stored secrets.
+Hardware-rooted device identity without stored keys.
 
-CoreBond demonstrates that device identity can be verified without storing or transmitting any secret material.
+This demo shows that a device can consistently prove its own identity, while a different device is rejected under the same conditions.
 
-This prototype shows consistent identity behavior and clear separation between physical devices using intrinsic entropy signals.
+No stored keys. No key exchange. Identity is derived at runtime from the device itself.
 
 ---
 
 ## Run the Demo
 
-Run from the repository root directory.
+Run from the repository root directory:
 
-### Commands
 pip install numpy  
 python run_demo.py  
 
 ---
 
-## Observed Behavior
+## What You'll See
 
 === CoreBond Demo ===
 
 Device A vs A: AUTHENTIC  
 Device A vs B: REJECT  
 
-Run time: < 1 second. No setup beyond Python + NumPy.
+- Same device → authenticates  
+- Different device → rejected  
 
 ---
 
@@ -33,40 +33,51 @@ Run time: < 1 second. No setup beyond Python + NumPy.
 
 - Signals from the same device are consistent  
 - Signals from different devices are distinguishable  
-- Identity can be verified without stored secrets  
+- Identity can be verified without stored keys  
 
-This behavior has been observed across multiple physical devices with consistent separation between legitimate and non-matching signals under repeated cold boot conditions.
-
-Environmental variation and long-term drift are active areas of ongoing validation.
-
----
-
-## What This Is Not
-
-- Not encryption  
-- Not a key storage mechanism  
-- Not a PUF library or wrapper  
-- Not secure key exchange  
-
-CoreBond does not protect secrets. It removes the need for them.
+This behavior has been observed across repeated runs with clear separation between legitimate and non-matching signals.
 
 ---
 
 ## Why This Matters
 
-Most security systems assume secrets can be protected.
+Traditional systems rely on stored secrets or key exchange.
 
-CoreBond assumes they will eventually be extracted.
+CoreBond removes both.
 
-Instead of defending stored credentials, CoreBond eliminates them:
+With no stored keys, there is nothing to extract from memory.  
+With no key exchange, there is nothing to intercept or replay.  
 
-- No secrets to steal  
-- No secrets to rotate  
-- No secrets to leak at scale  
+Identity is generated at runtime from the device itself.
 
-Identity is derived from the physical device itself, not from stored or transmitted data.
+---
 
-This removes entire classes of key extraction and replay attacks.
+## Test Conditions
+
+- Repeated cold boot measurements  
+- Identity derived from intrinsic device signal behavior  
+- No stored credentials or persistent identity artifacts  
+- Evaluation performed under identical conditions across devices  
+
+---
+
+## Observed Behavior
+
+- Same device → consistent identity reproduction (~83%)  
+- Different device → failed authentication under the same constraints  
+- Clear separation between legitimate and non-matching signals  
+
+---
+
+## Prototype Status
+
+This is an early-stage prototype intended to demonstrate core identity behavior.
+
+Ongoing work includes:
+- Improving identity reproducibility  
+- Environmental testing (temperature, voltage, aging)  
+- Expanded multi-device validation  
+- Adversarial resistance testing  
 
 ---
 
@@ -76,16 +87,4 @@ Exploring hardware-rooted identity for real-world systems?
 
 CoreBond is currently in active prototype validation across physical devices.
 
-If you're working on device security, IoT, or embedded systems, reach out:
-
-intro@corebond.io
-
----
-
-## License
-
-This repository is provided solely for evaluation and demonstration purposes.
-
-No use, copying, modification, distribution, or commercial exploitation of this code is permitted without prior written permission from CoreBond Technologies LLC.
-
-All rights reserved.
+Contact: intro@corebond.io
