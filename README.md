@@ -2,7 +2,7 @@
 
 Hardware-rooted device identity without stored keys.
 
-This demo shows that a device can consistently prove its own identity, while a different device is rejected under the same conditions.
+This demo shows a device recognizing itself and rejecting others under identical conditions.
 
 No stored keys. No key exchange. Identity is derived at runtime from the device itself.
 
@@ -31,6 +31,8 @@ Device A vs B: REJECT
 
 ## What This Demonstrates
 
+This demo shows signal comparison behavior only. Full CoreBond verification includes additional mechanisms for stability, challenge-response, and replay resistance.
+
 - Signals from the same device are consistent  
 - Signals from different devices are distinguishable  
 - Identity can be verified without stored keys  
@@ -43,7 +45,7 @@ This behavior has been observed across repeated runs with clear separation betwe
 
 Traditional systems rely on stored secrets or key exchange.
 
-CoreBond removes both.
+CoreBond eliminates both.
 
 With no stored keys, there is nothing to extract from memory.  
 With no key exchange, there is nothing to intercept or replay.  
@@ -63,7 +65,7 @@ Identity is generated at runtime from the device itself.
 
 ## Observed Behavior
 
-- Same device → consistent identity reproduction (~83%)  
+- Same device → consistent identity reproduction across repeated runs
 - Different device → failed authentication under the same constraints  
 - Clear separation between legitimate and non-matching signals  
 
