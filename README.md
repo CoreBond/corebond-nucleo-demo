@@ -12,8 +12,8 @@ No stored keys. No key exchange. Identity is derived at runtime from the device 
 
 Run from the repository root directory:
 
-pip install numpy  
-python run_demo.py  
+pip install -r requirements.txt
+python run_demo.py
 
 ---
 
