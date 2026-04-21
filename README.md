@@ -9,7 +9,7 @@ No stored keys. No key exchange. Identity is derived at runtime from the device 
 ---
 
 ## Live Demo
-Watch the demo
+Watch the demo (see /media/demo.mp4)
 
 ---
 
