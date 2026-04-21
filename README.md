@@ -1,3 +1,7 @@
+## Live Demo
+
+[Watch the demo](./2026-04-20%2020-38-51.mp4)
+
 # CoreBond Nucleo Demo (Developer Preview)
 
 Hardware-rooted device identity without stored keys.
