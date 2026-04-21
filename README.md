@@ -11,7 +11,18 @@ This demo shows a device recognizing itself and rejecting others under identical
 No stored keys. No key exchange. Identity is derived at runtime from the device itself.
 
 ---
+## What This Demo Proves
 
+- Same device produces consistent identity signals  
+- Different devices produce distinguishable signals  
+- Identity is derived at runtime, not stored  
+
+## What This Demo Does Not Yet Prove
+
+- Environmental stability (temperature, voltage variation)  
+- Full challenge-response protocol  
+- Replay resistance under adversarial conditions  
+- Large-scale validation across many devices  
 ## Run the Demo
 
 Run from the repository root directory:
