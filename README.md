@@ -9,7 +9,7 @@ No stored keys. No key exchange. Identity is derived at runtime from the device 
 ---
 
 ## Live Demo
-[Download / Watch the demo](https://github.com/CoreBond/corebond-nucleo-demo/raw/main/media/2026-04-20%2020-38-51.mp4)
+[Download the demo video](https://github.com/CoreBond/corebond-nucleo-demo/raw/main/media/2026-04-20%2020-38-51.mp4)
 
 ---
 
